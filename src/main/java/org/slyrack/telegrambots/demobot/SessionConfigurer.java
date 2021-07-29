@@ -17,7 +17,7 @@ public class SessionConfigurer {
             Util.getChatId(update)
                     .ifPresent(chatId -> session.setAttribute("chat-id", String.valueOf(chatId)));
 
-        if (!session.containsAttribute("usr"))
+        if (!session.containsAttribute("user"))
             Util.getUser(update)
                     .ifPresent(user -> session.setAttribute("user", user));
     }
