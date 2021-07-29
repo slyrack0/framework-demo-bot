@@ -31,10 +31,12 @@ public class InitController {
     }
 
     @Command(value = UpdateType.CALLBACK_QUERY, state = "subject-select-state")
-    public ModelAndView selectSubject() {
+    public ModelAndView selectSubject(final Update update) {
+
         return new StatefulModelAndView(
                 "enter-mobile-state",
-                "enter-mobile-view"
+                "enter-mobile-view",
+                new Model("subject", update.getCallbackQuery().getData())
         );
     }
 
