@@ -73,7 +73,6 @@ public class InitController {
         );
     }
 
-    @SneakyThrows
     @Command(
             value = UpdateType.MESSAGE,
             state = {
