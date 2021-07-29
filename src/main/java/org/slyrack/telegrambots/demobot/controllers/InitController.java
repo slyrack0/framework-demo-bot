@@ -31,7 +31,7 @@ public class InitController {
     }
 
     @Command(value = UpdateType.CALLBACK_QUERY, state = "subject-select-state")
-    public ModelAndView selectSubject(final Update update) {
+    public ModelAndView selectSubject() {
         return new StatefulModelAndView(
                 "enter-mobile-state",
                 "enter-mobile-view"
