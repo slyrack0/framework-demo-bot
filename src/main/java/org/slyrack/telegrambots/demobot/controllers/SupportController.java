@@ -10,7 +10,7 @@ import org.slyrack.telegrambots.flags.UpdateType;
 @Controller
 public class SupportController {
 
-    @Command(value = UpdateType.ALL, state = "support-dialog")
+    @Command(value = UpdateType.MESSAGE, state = "support-dialog")
     public ModelAndView supportDialog(final Model model) {
         return new StatefulModelAndView(
                 "support-dialog",
