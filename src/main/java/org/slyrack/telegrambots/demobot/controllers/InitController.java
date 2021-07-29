@@ -34,8 +34,7 @@ public class InitController {
     public ModelAndView selectSubject(final Update update) {
         return new StatefulModelAndView(
                 "enter-mobile-state",
-                "enter-mobile-view",
-                new Model("subject", update.getCallbackQuery().getData())
+                "enter-mobile-view"
         );
     }
 
