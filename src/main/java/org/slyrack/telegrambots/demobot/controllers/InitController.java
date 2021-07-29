@@ -30,11 +30,8 @@ public class InitController {
         );
     }
 
-    @SneakyThrows
     @Command(value = UpdateType.CALLBACK_QUERY, state = "subject-select-state")
-    public ModelAndView selectSubject(final Update update,
-                                      final AbsSender absSender) {
-
+    public ModelAndView selectSubject(final Update update) {
         return new StatefulModelAndView(
                 "enter-mobile-state",
                 "enter-mobile-view",
